@@ -6,7 +6,7 @@ import { Contract } from "ethers";
   const XTER_STAKING_ADDRESS = "0x2e1954298a2fdde09a0e23e61b01bf2f475acee7"; // 替换为实际的合约地址
   
   // 测试用户地址
-  const TEST_USER = "0xd0f60c32a6d7f395ba88e2f16e7797686f04138b"; // 替换为要测试的用户地址
+  const TEST_USER = "0xFaE8F703de1D0959991761d54b5cC83dC22E719B"; // 替换为要测试的用户地址
 
   async function main() {
     const StakingHelper = await ethers.getContractFactory("XterStakingHelper");

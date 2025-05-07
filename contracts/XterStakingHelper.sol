@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "./IXterStaking.sol";
-import "hardhat/console.sol";
 
 contract XterStakingHelper {
 
@@ -25,11 +24,8 @@ contract XterStakingHelper {
     function getStakesFromIds(address stakingContract, uint256[] memory stakeIds) public view returns (IXterStaking.Stk[] memory) {
         IXterStaking staking = IXterStaking(stakingContract);
         IXterStaking.Stk[] memory stakes = new IXterStaking.Stk[](stakeIds.length);
-        console.log("stakeIds.length: ",stakeIds.length);
-        console.log("stakeIds amount: ",staking.stakes(43677).amount);
+
         for (uint256 i = 0; i < stakeIds.length; i++) {
-            console.log("id: ",stakeIds[i]);
-            console.log("stakeIds amount: ",staking.stakes(stakeIds[i]).amount);
             stakes[i] = staking.stakes(stakeIds[i]);
         }
         return stakes;
